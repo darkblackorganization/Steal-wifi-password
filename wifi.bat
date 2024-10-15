@@ -1,6 +1,6 @@
 @echo off
 REM Batch Script to Steal Saved WiFi Password
-REM Author - Bittu Sharma
+REM Author - DARK_BLACK
 
 timeout /t 2 /nobreak >nul
 

